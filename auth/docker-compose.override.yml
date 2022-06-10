@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  postgres13:
+    container_name: postgres13
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=secret
+      - POSTGRES_DB=jds_test
+    restart: always
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  authapi:
+    container_name: authapi
+    restart: always
+    ports:
+      - "8000:8000"
