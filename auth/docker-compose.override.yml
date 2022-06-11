@@ -15,6 +15,7 @@ services:
 
   authapi:
     container_name: authapi
-    restart: always
+    depends_on:
+      - postgres13
     ports:
       - "8000:8000"

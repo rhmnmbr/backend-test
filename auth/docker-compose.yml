@@ -4,4 +4,7 @@ services:
     image: "postgres:latest"
 
   authapi:
-    image: "authapi"
+    image: ${DOCKER_REGISTRY-}authapi
+    build:
+      context: .
+      dockerfile: Dockerfile
