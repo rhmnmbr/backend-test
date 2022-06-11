@@ -7,6 +7,6 @@
 docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d
 ```
 
-4. Wait for docker compose all microservices. That’s it! (some microservices need extra time to work so please wait if not worked in first shut)
-5. Launch http://host.docker.internal:8000/docs in your browser to view the documentation of the Auth API.
-6. Launch http://host.docker.internal:3000/api-docs in your browser to view the documentation of the Fetch API.
+1. Wait for docker compose all services.
+2. Launch http://host.docker.internal:8000/docs in your browser to view the documentation of the Auth API.
+3. Launch http://host.docker.internal:3000/api-docs in your browser to view the documentation of the Fetch API.
