@@ -64,6 +64,6 @@ async def login(body: LoginBody):
 @app.get("/validate")
 async def login(request: Request, token = Depends(auth_scheme)):
     try:
-        return jwt.decode(token, JWT_KEY_SECRET, ALGORITHM)
+        return jwt.decode(token.credentials, JWT_KEY_SECRET, ALGORITHM)
     except:
         raise HTTPException(400, "Signature verification failed")
